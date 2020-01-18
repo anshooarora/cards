@@ -17,13 +17,13 @@ class Randomizr:
             seeds.add(random.randint(min,max))
         return list(seeds)
 
-# 1: random cards, cards may repeat
+#1: random cards, cards may repeat
 def get_random_cards(n):
     if n is None or not isinstance(n, int) or n < 0 or n > 52:
         return None
     return [random.choice(ranks) + " of " + random.choice(suits) for ix in range(n)]
 
-#2 random cards, cards will not repeat   
+#2: random cards, cards will not repeat   
 def ensure_random_cards(n):
     if n is None or not isinstance(n, int) or n < 0 or n > 52:
         return None
